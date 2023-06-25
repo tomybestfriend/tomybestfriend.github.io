@@ -18,25 +18,35 @@
 			margin: 2px;
 			padding: 8px;
 			font-family: Cascadia Code;
+			font-size: 20px;
 		}
 		button{
 			background-color: wheat;
 			padding: 10px;
 			border-radius: 10px;
 			font-family: Cascadia Code;
+			font-size: 15px;
 		}
 		div{
 			margin: 15%;
 			margin-left: 42%;
+			
+		}
+		p{
+			margin-left: 2px;
+			color:red;
+			font-family: Cascadia Code;
 		}
 	</style>
 
 </head>
 <body>
 	<div>
-		<h1 style="font-family: Cascadia Code;">Login Page</h1>
+		<h1 style="font-family: Cascadia Code;font-size: 35px;">Login Page</h1>
 		<input type="text" id="u_name" placeholder="enter your username"><br>
-		<input type="password" id="u_pass" placeholder="enter your password"><br><br>
+		<input type="password" id="u_pass" placeholder="enter your password"><br><br id="bos">
+
+		<p id="error"></p>
 
 		<button type="button" onclick="login()">Login</button>
 	</div>
@@ -44,11 +54,12 @@
 		function login(){
 			var username=document.getElementById('u_name').value;
 			var userpass=document.getElementById('u_pass').value;
-
-			if(username=="Aliko" && userpass=="12345"){
-				document.write("Welcome!");
+			/*HAHAHAHHHAHAHA! YOU FOUND IT*/
+			if(username=="admin" && userpass=="admin"){
+				window.location.href="bd.html";
 			}else{
-				document.write("Error! \n Wrong password or username!");
+				document.getElementById('bos').remove();
+				document.getElementById('error').innerHTML="The password you have entered is incorrect!";
 			}
 
 		}
