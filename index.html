@@ -1,69 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
 	<title>Login</title>
+	<script src="check.js"></script>
 	<style>
-		body{
-			background-image: url('https://tomybestfriend.github.io//gq-perfect-damn-salad.gif');/*niye bunu qoydum bilmirem!*/
+		body {
+			background-image: url('gq-perfect-damn-salad.gif');
+			/*niye bunu qoydum bilmirem!*/
 			background-color: #ffd56f;
 			background-repeat: no-repeat;
 			background-size: auto;
 		}
-		input{
+
+		input {
 			border: 1px solid burlywood;
 			border-radius: 5px;
 			border-width: 2px;
 			margin: 2px;
 			padding: 8px;
-			font-family: Cascadia Code;
 			font-size: 20px;
+            font-family: Cascadia Code;
+            letter-spacing: 0.125em;
 		}
-		button{
+
+		button {
 			background-color: wheat;
 			padding: 10px;
 			border-radius: 10px;
 			font-family: Cascadia Code;
 			font-size: 15px;
 		}
-		div{
-			margin: 15%;
+		button:hover
+        {
+            animation-name: ali;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes ali {
+            0%{
+                background-color: wheat;
+            }
+            5%{
+                background-color:rgb(221, 18, 7);
+            }
+            15%{
+                background-color:rgb(242, 118, 3)
+            }
+            25%{
+                background-color: rgb(255, 242, 0);
+            }
+            35%{
+                background-color: rgb(71, 251, 16);
+            }
+            45%{
+                background-color: rgb(0, 200, 255);
+            }
+            55%{
+                background-color: blueviolet;
+            }
+            65%{
+                background-color: blue;
+            }
+            75%{
+                background-color: rgb(221, 18, 7);
+            }
+        }
+
+		div {
+			margin: 12.2%;
+            margin-left: 270px;
+            margin-bottom: -500px;
 			margin-left: 42%;
-			
+            padding: 30px;
+            width: min-content;
+            background-color: rgba(234, 246, 4, 0.841);
+            border-radius: 40px;
+            border-style:inset;
+            border-color: rgba(255, 170, 0, 0.811);
 		}
-		p{
+
+		p {
 			margin-left: 2px;
-			color:red;
+			color: red;
 			font-family: Cascadia Code;
+		}
+
+		a {
+			color: black;
+			font-family: Cascadia Code;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: darkblue;
 		}
 	</style>
 
 </head>
+
 <body>
 	<div>
-		<h1 style="font-family: Cascadia Code;font-size: 35px;">Login Page</h1>
+		<h1 style="font-family: Cascadia Code;font-size: 38px; text-shadow: 5px 5px 3px rgb(0, 247, 95);">Login Page</h1>
 		<input type="text" id="u_name" placeholder="enter your username"><br>
 		<input type="password" id="u_pass" placeholder="enter your password"><br><br id="bos">
 
 		<p id="error"></p>
+		<a href="sign_in.html">If you don't have an account, click here!</a><br><br>
 
 		<button type="button" onclick="login()">Login</button>
 	</div>
-	<script>
-		function login(){
-			var username=document.getElementById('u_name').value;
-			var userpass=document.getElementById('u_pass').value;
-			/*HAHAHAHHHAHAHA! YOU FOUND IT*/
-			if(username=="admin" && userpass=="admin"){
-				window.location.href="https://tomybestfriend.github.io//bf.html";
-			}else{
-				document.getElementById('bos').remove();
-				document.getElementById('error').innerHTML="The password you have entered is incorrect!";
-			}
-
-		}
-	</script>
 
 </body>
+
 </html>
