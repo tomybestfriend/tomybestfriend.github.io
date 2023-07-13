@@ -8,7 +8,7 @@
 	<title>Login</title>
 	<style>
 		body {
-			background-image: url('gq-perfect-damn-salad.gif');
+			background-image: url('https://tomybestfriend.github.io//gq-perfect-damn-salad.gif');
 			/*niye bunu qoydum bilmirem!*/
 			background-color: #ffd56f;
 			background-repeat: no-repeat;
@@ -21,8 +21,22 @@
 			border-width: 2px;
 			margin: 2px;
 			padding: 8px;
-			font-family: Cascadia Code;
 			font-size: 20px;
+            font-family: Cascadia Code;
+            letter-spacing: 0.125em;
+		}
+
+		input:focus{
+			animation-name: aliko;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes aliko{
+			0%{border: 2px solid white;outline: 2px solid rgb(233, 169, 18);}
+			50%{border: 2px solid white;outline: 4px solid rgb(68, 255, 124);box-shadow: 2px 2px 20px 12px lightblue;}
+			100%{border: 2px solid white;outline: 2px solid burlywood;}
 		}
 
 		button {
@@ -40,39 +54,46 @@
             animation-timing-function: linear;
         }
         @keyframes ali {
-            0%{
+            4%{
                 background-color: wheat;
             }
-            5%{
+            9%{
                 background-color:rgb(221, 18, 7);
             }
-            15%{
+            19%{
                 background-color:rgb(242, 118, 3)
             }
-            25%{
+            29%{
                 background-color: rgb(255, 242, 0);
             }
-            35%{
+            39%{
                 background-color: rgb(71, 251, 16);
             }
-            45%{
+            49%{
                 background-color: rgb(0, 200, 255);
             }
-            55%{
+            59%{
                 background-color: blueviolet;
             }
-            65%{
+            69%{
                 background-color: blue;
             }
-            75%{
+            79%{
                 background-color: rgb(221, 18, 7);
             }
         }
 
 		div {
-			margin: 15%;
+			margin: 12%;
+            margin-left: 270px;
+            margin-bottom: -500px;
 			margin-left: 42%;
-
+            padding: 30px;
+            width: min-content;
+            background-color: rgba(234, 246, 4, 0.841);
+            border-radius: 40px;
+            border-style:inset;
+            border-color: rgba(255, 170, 0, 0.811);
 		}
 
 		p {
@@ -96,12 +117,12 @@
 
 <body>
 	<div>
-		<h1 style="font-family: Cascadia Code;font-size: 35px;">Login Page</h1>
+		<h1 style="font-family: Cascadia Code;font-size: 38px; text-shadow: 5px 5px 3px rgb(0, 247, 95); color:rgb(38, 4, 94);">Login Page</h1>
 		<input type="text" id="u_name" placeholder="enter your username"><br>
 		<input type="password" id="u_pass" placeholder="enter your password"><br><br id="bos">
 
 		<p id="error"></p>
-		<a href="sign_in.html">If you don't have an account, click here!</a><br><br>
+		<a href="https://tomybestfriend.github.io//sign_in.html">If you don't have an account, click here!</a><br><br>
 
 		<button type="button" onclick="login()">Login</button>
 	</div>
@@ -110,9 +131,10 @@
 		function login() {
 			var username = document.getElementById('u_name').value;
 			var userpass = document.getElementById('u_pass').value;
+
 			/*HAHAHAHHHAHAHA! YOU FOUND IT*/
 			if (username == "admin" && userpass == "admin") {
-				window.location.href = "https://tomybestfriend.github.io//bf.html";
+				window.location.href = "tomybestfriend.github.io//bf.html";
 			} else {
 				document.getElementById('bos').remove();
 				document.getElementById('error').innerHTML = "The password you have entered is incorrect!";
@@ -121,7 +143,6 @@
 		function signin(){
 			var name=document.getElementById('sign_name').value;
 			var pass=document.getElementById('sign_pass').value;
-
 		}
 	</script>
 
